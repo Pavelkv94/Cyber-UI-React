@@ -1,0 +1,68 @@
+{
+  "name": "@pavelkv94/cyber-ui-react",
+  "version": "0.0.1",
+  "main": "dist/esm/index.js",
+  "module": "dist/cjs/index.js",
+  "files": [
+    "dist/**/*"
+  ],
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "keywords": [
+    "ui",
+    "react",
+    "cyberpunk",
+    "components",
+    "design"
+  ],
+  "author": "Pavelkv94 obilonix@proton.me",
+  "license": "Apache-2.0",
+  "description": "A UI library with cyberpunk styles",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pavelkv94/Cyber-UI-React.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Pavelkv94/Cyber-UI-React/issues"
+  },
+  "homepage": "https://github.com/Pavelkv94/Cyber-UI-React#readme",
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@rollup/plugin-url": "^8.0.2",
+    "@storybook/addon-actions": "^8.3.1",
+    "@storybook/addon-essentials": "^8.3.1",
+    "@storybook/addon-interactions": "^8.3.1",
+    "@storybook/addon-links": "^8.3.1",
+    "@storybook/builder-webpack5": "^8.3.1",
+    "@storybook/manager-webpack5": "^6.5.16",
+    "@storybook/preset-scss": "^1.0.3",
+    "@storybook/react": "^8.3.1",
+    "@storybook/testing-library": "^0.2.2",
+    "@svgr/rollup": "^8.1.0",
+    "@svgr/webpack": "^8.1.0",
+    "@types/react": "^18.3.7",
+    "@typescript-eslint/eslint-plugin": "^8.6.0",
+    "@typescript-eslint/parser": "^8.6.0",
+    "babel-loader": "^9.2.1",
+    "eslint": "^9.10.0",
+    "eslint-config-standard-with-typescript": "^43.0.1",
+    "eslint-plugin-import": "^2.30.0",
+    "eslint-plugin-n": "^17.10.3",
+    "eslint-plugin-promise": "^7.1.0",
+    "eslint-plugin-react": "^7.36.1",
+    "gh-pages": "^6.1.1",
+    "node-sass": "^9.0.0",
+    "rollup": "^4.21.3",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-postcss": "^4.0.2",
+    "typescript": "^5.6.2",
+    "url-loader": "^4.1.1"
+  },
+  "dependencies": {
+    "react": "^18.3.1"
+  }
+}
