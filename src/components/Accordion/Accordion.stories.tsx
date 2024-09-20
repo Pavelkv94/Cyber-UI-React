@@ -1,5 +1,5 @@
 import React from 'react'
-import type { Meta, Story } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 import { Accordion, AccordionProps } from './Accordion'
 
 export default {
@@ -19,7 +19,7 @@ export default {
 
 type AccordionStoryProps = Pick<AccordionProps, 'title' | 'children'>
 
-export const AccordionStoryTemplate: Story<AccordionStoryProps> = ({ ...args }) => (
+export const AccordionStoryTemplate: StoryFn<AccordionStoryProps> = ({ ...args }) => (
   <Accordion {...args} innerControl />
 )
 

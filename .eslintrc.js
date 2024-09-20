@@ -12,10 +12,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module'
   },
-  extends: [
-    'plugin:react/recommended',
-    'standard-with-typescript'
-  ],
+  extends: ['plugin:react/recommended', 'standard-with-typescript', 'plugin:storybook/recommended'],
   overrides: [
     {
       files: ['*.ts', '*.tsx'],

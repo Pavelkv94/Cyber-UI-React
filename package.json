@@ -8,7 +8,10 @@
   ],
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "deploy-storybook": "npm run build-storybook && gh-pages -d storybook-static"
   },
   "keywords": [
     "ui",
@@ -30,39 +33,36 @@
   "homepage": "https://github.com/Pavelkv94/Cyber-UI-React#readme",
   "devDependencies": {
     "@babel/core": "^7.25.2",
+    "@chromatic-com/storybook": "^1.9.0",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.6",
     "@rollup/plugin-url": "^8.0.2",
-    "@storybook/addon-actions": "^8.3.1",
-    "@storybook/addon-essentials": "^8.3.1",
-    "@storybook/addon-interactions": "^8.3.1",
-    "@storybook/addon-links": "^8.3.1",
-    "@storybook/builder-webpack5": "^8.3.1",
-    "@storybook/manager-webpack5": "^6.5.16",
+    "@storybook/addon-essentials": "^8.3.2",
+    "@storybook/addon-interactions": "^8.3.2",
+    "@storybook/addon-links": "^8.3.2",
+    "@storybook/addon-onboarding": "^8.3.2",
+    "@storybook/addon-webpack5-compiler-swc": "^1.0.5",
+    "@storybook/blocks": "^8.3.2",
     "@storybook/preset-scss": "^1.0.3",
-    "@storybook/react": "^8.3.1",
-    "@storybook/testing-library": "^0.2.2",
+    "@storybook/react": "^8.3.2",
+    "@storybook/react-webpack5": "^8.3.2",
+    "@storybook/test": "^8.3.2",
     "@svgr/rollup": "^8.1.0",
     "@svgr/webpack": "^8.1.0",
     "@types/react": "^18.3.7",
-    "@typescript-eslint/eslint-plugin": "^8.6.0",
-    "@typescript-eslint/parser": "^8.6.0",
     "babel-loader": "^9.2.1",
-    "eslint": "^9.10.0",
-    "eslint-config-standard-with-typescript": "^43.0.1",
-    "eslint-plugin-import": "^2.30.0",
-    "eslint-plugin-n": "^17.10.3",
-    "eslint-plugin-promise": "^7.1.0",
-    "eslint-plugin-react": "^7.36.1",
+    "eslint-plugin-storybook": "^0.8.0",
     "gh-pages": "^6.1.1",
     "node-sass": "^9.0.0",
     "rollup": "^4.21.3",
     "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-postcss": "^4.0.2",
+    "storybook": "^8.3.2",
     "typescript": "^5.6.2",
     "url-loader": "^4.1.1"
   },
   "dependencies": {
-    "react": "^18.3.1"
+    "react": "^18.3.1",
+    "sass-loader": "^16.0.1"
   }
 }
