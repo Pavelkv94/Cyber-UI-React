@@ -1,0 +1,52 @@
+@import "../../core//styles/global.scss";
+
+.cyberpunk-card {
+  width: 300px;
+  height: 500px;
+  position: relative;
+  background-color: rgba(255, 0, 127, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: background-color 0.3s ease, transform 0.3s ease; // Added transition for background and transform
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+
+  &::before {
+    background: linear-gradient(to top, rgba(0, 255, 255, 0.3), transparent); // Initial state for the before pseudo-element
+    transform: translateY(100%); // Start off-screen
+  }
+
+  &:hover {
+    transform: scale(1.05); // Slight scale-up effect on hover
+
+    &::after {
+      background: linear-gradient(to top, rgba(255, 0, 127, 0.3), transparent);
+      transform: translateY(0); // Move into view
+    }
+
+    &::before {
+      transform: translateY(0); // Move into view
+    }
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: $white;
+  }
+
+  .card-body {
+    font-size: 1rem;
+    color: $white;
+  }
+}

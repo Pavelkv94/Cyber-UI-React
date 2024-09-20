@@ -1,0 +1,265 @@
+@import "../../core//styles/global.scss";
+
+@mixin fillBack($color, $direction) {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color;
+    z-index: -1;
+    transition: transform 0.3s ease;
+    transform: scaleX(0);
+    transform-origin: $direction;
+  }
+  &:hover:before {
+    transform: scaleX(1);
+  }
+
+  &:hover {
+    color: #ffffff;
+  }
+}
+
+.cyberpunk-button {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+}
+
+.cyberpunk-button--rounded {
+  border-radius: 10px;
+}
+
+.cyberpunk-button--electric {
+  color: $electric-blue;
+  box-shadow: 0 0 5px $electric-blue, 0 0 10px $electric-blue;
+  position: relative;
+  overflow: hidden;
+}
+
+.cyberpunk-button--glow {
+  color: $neon-pink;
+  box-shadow: 0 0 5px $neon-pink, 0 0 10px $neon-pink;
+  position: relative;
+  overflow: hidden;
+}
+
+.cyberpunk-button--green {
+  color: $acid-green;
+  box-shadow: 0 0 5px $acid-green, 0 0 10px $acid-green;
+  position: relative;
+  overflow: hidden;
+}
+
+.cyberpunk-button--orange {
+  color: $burnt-orange;
+  box-shadow: 0 0 5px $burnt-orange, 0 0 10px $burnt-orange;
+  position: relative;
+  overflow: hidden;
+}
+
+.cyberpunk-button--purple {
+  color: $bright-purple;
+  box-shadow: 0 0 5px $bright-purple, 0 0 10px $bright-purple;
+  position: relative;
+  overflow: hidden;
+}
+
+//hoverLeft
+.cyberpunk-button--electric.cyberpunk-button-hover--left {
+  @include fillBack($electric-blue, left);
+}
+.cyberpunk-button--glow.cyberpunk-button-hover--left {
+  @include fillBack($neon-pink, left);
+}
+.cyberpunk-button--green.cyberpunk-button-hover--left {
+  @include fillBack($acid-green, left);
+}
+.cyberpunk-button--orange.cyberpunk-button-hover--left {
+  @include fillBack($burnt-orange, left);
+}
+.cyberpunk-button--purple.cyberpunk-button-hover--left {
+  @include fillBack($bright-purple, left);
+}
+
+//hoverRight
+.cyberpunk-button--electric.cyberpunk-button-hover--right {
+  @include fillBack($electric-blue, right);
+}
+.cyberpunk-button--glow.cyberpunk-button-hover--right {
+  @include fillBack($neon-pink, right);
+}
+.cyberpunk-button--green.cyberpunk-button-hover--right {
+  @include fillBack($acid-green, right);
+}
+.cyberpunk-button--orange.cyberpunk-button-hover--right {
+  @include fillBack($burnt-orange, right);
+}
+.cyberpunk-button--purple.cyberpunk-button-hover--right {
+  @include fillBack($bright-purple, right);
+}
+//hoverCenter
+.cyberpunk-button--electric.cyberpunk-button-hover--center {
+  @include fillBack($electric-blue, center);
+}
+.cyberpunk-button--glow.cyberpunk-button-hover--center {
+  @include fillBack($neon-pink, center);
+}
+.cyberpunk-button--green.cyberpunk-button-hover--center {
+  @include fillBack($acid-green, center);
+}
+.cyberpunk-button--orange.cyberpunk-button-hover--center {
+  @include fillBack($burnt-orange, center);
+}
+.cyberpunk-button--purple.cyberpunk-button-hover--center {
+  @include fillBack($bright-purple, center);
+}
+
+//dashed
+.cyberpunk-button--electric.cyberpunk-button--dashed {
+  border: 2px dashed $electric-blue;
+}
+.cyberpunk-button--glow.cyberpunk-button--dashed {
+  border: 2px dashed $neon-pink;
+}
+.cyberpunk-button--green.cyberpunk-button--dashed {
+  border: 2px dashed $acid-green;
+}
+.cyberpunk-button--orange.cyberpunk-button--dashed {
+  border: 2px dashed $burnt-orange;
+}
+.cyberpunk-button--purple.cyberpunk-button--dashed {
+  border: 2px dashed $bright-purple;
+}
+
+//outlined
+.cyberpunk-button--electric.cyberpunk-button--outlined {
+  border: 2px solid $electric-blue;
+}
+.cyberpunk-button--glow.cyberpunk-button--outlined {
+  border: 2px solid $neon-pink;
+}
+.cyberpunk-button--green.cyberpunk-button--outlined {
+  border: 2px solid $acid-green;
+}
+.cyberpunk-button--orange.cyberpunk-button--outlined {
+  border: 2px solid $burnt-orange;
+}
+.cyberpunk-button--purple.cyberpunk-button--outlined {
+  border: 2px solid $bright-purple;
+}
+
+//contained
+.cyberpunk-button--electric.cyberpunk-button--contained {
+  border: 2px solid $electric-blue;
+  background-color: $electric-blue;
+  color: white;
+}
+.cyberpunk-button--glow.cyberpunk-button--contained {
+  border: 2px solid $neon-pink;
+  background-color: $neon-pink;
+  color: white;
+}
+.cyberpunk-button--green.cyberpunk-button--contained {
+  border: 2px solid $acid-green;
+  background-color: $acid-green;
+  color: white;
+}
+.cyberpunk-button--orange.cyberpunk-button--contained {
+  border: 2px solid $burnt-orange;
+  background-color: $burnt-orange;
+  color: white;
+}
+.cyberpunk-button--purple.cyberpunk-button--contained {
+  border: 2px solid $bright-purple;
+  background-color: $bright-purple;
+  color: white;
+}
+
+//text
+.cyberpunk-button--electric.cyberpunk-button--text {
+  border: none;
+  box-shadow: none;
+}
+.cyberpunk-button--glow.cyberpunk-button--text {
+  border: none;
+  box-shadow: none;
+}
+.cyberpunk-button--green.cyberpunk-button--text {
+  border: none;
+  box-shadow: none;
+}
+.cyberpunk-button--orange.cyberpunk-button--text {
+  border: none;
+  box-shadow: none;
+}
+.cyberpunk-button--purple.cyberpunk-button--text {
+  border: none;
+  box-shadow: none;
+}
+
+//size
+.cyberpunk-button--small {
+  padding: 10px 16px;
+  font-size: 12px;
+}
+.cyberpunk-button--medium {
+  padding: 11px 20px;
+  font-size: 14px;
+}
+.cyberpunk-button--large {
+  padding: 12px 24px;
+  font-size: 16px;
+}
+
+//hoverStyle
+
+// .cyberpunk:hover {
+//   box-shadow: 0 0 20px #f0f, 0 0 30px #0ff;
+// }
+
+// .neonBorder {
+//   background-color: #0f0f0f;
+//   color: #ffffff;
+//   border: 2px dashed #0ff;
+// }
+
+// .neonBorder:hover {
+//   border-style: solid;
+//   color: #0ff;
+// }
+
+// .flicker {
+//   background-color: #ff00ff;
+//   color: #000;
+//   border: none;
+//   animation: flicker 1.5s infinite alternate;
+// }
+
+// @keyframes flicker {
+//   0% {
+//     opacity: 1;
+//   }
+//   50% {
+//     opacity: 0.8;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
+
+// .hologram {
+//   background-color: transparent;
+//   color: #00ffff;
+//   border: 2px solid #00ffff;
+//   text-shadow: 0 0 5px #00ffff;
+// }
+
+// .hologram:hover {
+//   background-color: rgba(0, 255, 255, 0.1);
+// }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { Meta, StoryFn } from "@storybook/react/*";
 import CyberpunkButton, { CyberpunkButtonProps } from "./CyberpunkButton";
 
@@ -7,15 +7,24 @@ export default {
   component: CyberpunkButton,
   args: {
     label: "LAbel",
-    styleType: "cyberpunk",
+    styleType: "electric",
+    size: "medium",
+    type: "outlined",
+    rounded: false,
+    hoverStyle: "none",
   },
-  tags: ['autodocs'],
+  tags: ["autodocs"],
 } as Meta<CyberPunkButtonStoryProps>;
 
-type CyberPunkButtonStoryProps = Pick<CyberpunkButtonProps, "label" | "styleType">;
+type CyberPunkButtonStoryProps = Pick<CyberpunkButtonProps, "label" | "styleType" | "size" | "type" | "rounded" | "hoverStyle">;
 
-export const CyberPunkButtonStoryTemplate: StoryFn<CyberPunkButtonStoryProps> = ({ ...args }) => <CyberpunkButton onClick={function (): void {
-    throw new Error('Function not implemented.');
-} } {...args} />;
+export const CyberPunkButtonStoryTemplate: StoryFn<CyberPunkButtonStoryProps> = ({ ...args }) => (
+  <CyberpunkButton
+    onClick={function (): void {
+      throw new Error("Function not implemented.");
+    }}
+    {...args}
+  />
+);
 
 CyberPunkButtonStoryTemplate.storyName = "CyberpunkButton";
